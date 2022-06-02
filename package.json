@@ -86,7 +86,7 @@
     "yargs": "^17.4.1"
   },
   "devDependencies": {
-    "@nestjs/cli": "^8.2.5",
+    "@nestjs/cli": "^8.2.6",
     "@nestjs/schematics": "^8.0.11",
     "@nestjs/testing": "^8.4.4",
     "@types/bcrypt": "^5.0.0",
