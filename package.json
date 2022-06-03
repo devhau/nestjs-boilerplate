@@ -80,7 +80,7 @@
     "redis": "^4.1.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rotating-file-stream": "^3.0.3",
+    "rotating-file-stream": "^3.0.4",
     "rxjs": "^7.5.5",
     "socket.io": "^4.5.1",
     "swagger-ui-express": "^4.4.0",
