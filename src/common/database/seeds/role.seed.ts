@@ -1,8 +1,8 @@
 import { Command } from 'nestjs-command';
 import { Injectable } from '@nestjs/common';
-import { ENUM_PERMISSIONS } from 'src/common/permission/permission.constant';
-import { PermissionService } from 'src/common/permission/service/permission.service';
-import { RoleBulkService } from 'src/common/role/service/role.bulk.service';
+import { ENUM_PERMISSIONS } from 'src/modules/permission/permission.constant';
+import { PermissionService } from 'src/modules/permission/service/permission.service';
+import { RoleBulkService } from 'src/modules/role/service/role.bulk.service';
 import { DebuggerService } from 'src/common/debugger/service/debugger.service';
 import { PermissionDocument } from 'src/schemas/permission.schema';
 

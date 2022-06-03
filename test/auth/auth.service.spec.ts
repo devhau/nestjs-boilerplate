@@ -1,8 +1,8 @@
 import { Test } from '@nestjs/testing';
-import { AuthService } from 'src/common/auth/service/auth.service';
+import { AuthService } from 'src/modules/auth/service/auth.service';
 import { CoreModule } from 'src/common/core/core.module';
-import { IRoleDocument } from 'src/common/role/role.interface';
-import { IUserDocument } from 'src/common/user/user.interface';
+import { IRoleDocument } from 'src/modules/role/role.interface';
+import { IUserDocument } from 'src/modules/user/user.interface';
 import faker from '@faker-js/faker';
 
 describe('AuthService', () => {

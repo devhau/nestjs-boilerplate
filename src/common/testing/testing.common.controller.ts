@@ -1,6 +1,6 @@
 import { Controller, Get, VERSION_NEUTRAL } from '@nestjs/common';
-import { ApiKey, AuthExcludeApiKey } from 'src/common/auth/auth.decorator';
-import { IAuthApiPayload } from 'src/common/auth/auth.interface';
+import { ApiKey, AuthExcludeApiKey } from 'src/modules/auth/auth.decorator';
+import { IAuthApiPayload } from 'src/modules/auth/auth.interface';
 import { UserAgent } from 'src/common/utils/request/request.decorator';
 import { Response } from 'src/common/utils/response/response.decorator';
 import { IResponse } from 'src/common/utils/response/response.interface';

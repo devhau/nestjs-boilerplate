@@ -4,6 +4,7 @@ import { AppModule } from 'src/app.module';
 import { ConfigService } from '@nestjs/config';
 import { useContainer } from 'class-validator';
 import { SwaggerModule, SwaggerCustomOptions, DocumentBuilder } from '@nestjs/swagger';
+import { SocketRedisIOAdapter } from './common/socket/socket.redis.adapter';
 async function bootstrap() {
     const app: NestApplication = await NestFactory.create(AppModule);
     const configService = app.get(ConfigService);
@@ -18,6 +19,10 @@ async function bootstrap() {
     process.env.NODE_ENV = env;
 
 
+    const redis_server: string = configService.get<string>('redis.server');
+    if (redis_server) {
+        app.useWebSocketAdapter(new SocketRedisIOAdapter(app, redis_server));
+    }
     // Global Prefix
     app.setGlobalPrefix('/api');
     useContainer(app.select(AppModule), { fallbackOnErrors: true });
@@ -33,13 +38,12 @@ async function bootstrap() {
         swaggerOptions: {
             persistAuthorization: true,
         },
-        customSiteTitle: 'My API Docs',
+        customSiteTitle: 'Vtekchain API Docs',
     };
     const config = new DocumentBuilder()
-        .setTitle('Cats example')
-        .setDescription('The cats API description')
+        .setTitle('Vtekchain API Docs')
+        .setDescription('Vtekchain API Docs')
         .setVersion('1.0')
-        .addTag('cats')
         .build();
     const document = SwaggerModule.createDocument(app, config);
     SwaggerModule.setup('docs', app, document, customOptions);

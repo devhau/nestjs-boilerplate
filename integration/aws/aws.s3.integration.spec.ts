@@ -8,7 +8,7 @@ import request from 'supertest';
 import faker from '@faker-js/faker';
 import { TerminusModule } from '@nestjs/terminus';
 import { HelperDateService } from 'src/common/utils/helper/service/helper.date.service';
-import { AuthApiService } from 'src/common/auth/service/auth.api.service';
+import { AuthApiService } from 'src/modules/auth/service/auth.api.service';
 
 describe('Aws S3 Integration', () => {
     let app: INestApplication;

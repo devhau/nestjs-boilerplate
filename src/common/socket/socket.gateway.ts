@@ -43,12 +43,12 @@ export class SocketGateway implements OnGatewayInit, OnGatewayConnection, OnGate
         }
     }
     sendGuestAll(event: string, payload: any) {
-        this.server.to('user_guest').emit(event, payload);
+        return this.server.to('user_guest').emit(event, payload);
     }
     sendNotGuestAll(event: string, payload: any) {
-        this.server.to('user_not_guest').emit(event, payload);
+        return this.server.to('user_not_guest').emit(event, payload);
     }
     sendUser(userId: string, event: string, payload: any) {
-        this.server.to(`user_${userId}`).emit(event, payload);
+        return this.server.to(`user_${userId}`).emit(event, payload);
     }
 }

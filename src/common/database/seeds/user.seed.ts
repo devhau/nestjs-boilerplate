@@ -1,9 +1,9 @@
 import { Command } from 'nestjs-command';
 import { Injectable } from '@nestjs/common';
-import { UserService } from 'src/common/user/service/user.service';
-import { UserBulkService } from 'src/common/user/service/user.bulk.service';
-import { RoleService } from 'src/common/role/service/role.service';
-import { AuthService } from 'src/common/auth/service/auth.service';
+import { UserService } from 'src/modules/user/service/user.service';
+import { UserBulkService } from 'src/modules/user/service/user.bulk.service';
+import { RoleService } from 'src/modules/role/service/role.service';
+import { AuthService } from 'src/modules/auth/service/auth.service';
 import { RoleDocument } from 'src/schemas/role.schema';
 import { DebuggerService } from 'src/common/debugger/service/debugger.service';
 
@@ -15,7 +15,7 @@ export class UserSeed {
         private readonly userService: UserService,
         private readonly userBulkService: UserBulkService,
         private readonly roleService: RoleService
-    ) {}
+    ) { }
 
     @Command({
         command: 'insert:user',
@@ -30,16 +30,16 @@ export class UserSeed {
 
         try {
             const password = await this.authService.createPassword(
-                'aaAA@@123444'
+                'abc@123@12346'
             );
 
             await this.userService.create({
-                firstName: 'admin',
-                lastName: 'test',
+                firstName: 'dev',
+                lastName: 'hau',
                 email: 'admin@mail.com',
                 password: password.passwordHash,
                 passwordExpired: password.passwordExpired,
-                mobileNumber: '08111111111',
+                mobileNumber: '0888888888',
                 role: role._id,
                 salt: password.salt,
             });

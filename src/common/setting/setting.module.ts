@@ -23,8 +23,8 @@ import { SettingBulkService } from './service/setting.bulk.service';
             DATABASE_CONNECTION_NAME
         ),
     ],
-    exports: [SettingService, SettingBulkService],
-    providers: [SettingService, SettingBulkService],
+    exports: [SettingService, SettingBulkService, { provide: 'IMaintenance', useClass: SettingService }],
+    providers: [SettingService, SettingBulkService, { provide: 'IMaintenance', useClass: SettingService }],
     controllers: [],
 })
-export class SettingModule {}
+export class SettingModule { }

@@ -2,7 +2,7 @@ import { HttpStatus, INestApplication } from '@nestjs/common';
 import { RouterModule } from '@nestjs/core';
 import { Test } from '@nestjs/testing';
 import { useContainer } from 'class-validator';
-import { AuthApiService } from 'src/common/auth/service/auth.api.service';
+import { AuthApiService } from 'src/modules/auth/service/auth.api.service';
 import { CoreModule } from 'src/common/core/core.module';
 import { SettingService } from 'src/common/setting/service/setting.service';
 import { HelperDateService } from 'src/common/utils/helper/service/helper.date.service';

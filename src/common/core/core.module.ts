@@ -1,10 +1,8 @@
 import { Module } from '@nestjs/common';
-import { MessageModule } from 'src/common/message/message.module';
 import { ConfigModule } from '@nestjs/config';
 import { WinstonModule } from 'nest-winston';
 import { DebuggerModule } from 'src/common/debugger/debugger.module';
 import Configs from 'src/config/index';
-import { AuthModule } from 'src/common/auth/auth.module';
 import { PaginationModule } from 'src/common/utils/pagination/pagination.module';
 import { HelperModule } from 'src/common/utils/helper/helper.module';
 import { MiddlewareModule } from 'src/common/utils/middleware/middleware.module';
@@ -16,7 +14,8 @@ import { DatabaseService } from 'src/common/database/service/database.service';
 import { LoggerModule } from 'src/common/logger/logger.module';
 import { RequestModule } from 'src/common/utils/request/request.module';
 import { ErrorModule } from 'src/common/utils/error/error.module';
-import { SettingModule } from 'src/common/setting/setting.module';
+import { MessageModule } from 'src/common/message/message.module';
+import { SettingModule } from '../setting/setting.module';
 
 @Module({
     controllers: [],
@@ -51,7 +50,6 @@ import { SettingModule } from 'src/common/setting/setting.module';
         PaginationModule,
         DebuggerModule,
         HelperModule,
-        AuthModule,
         SettingModule,
     ],
 })

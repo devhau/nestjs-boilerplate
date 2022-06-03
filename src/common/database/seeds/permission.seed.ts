@@ -1,7 +1,7 @@
 import { Command } from 'nestjs-command';
 import { Injectable } from '@nestjs/common';
-import { ENUM_PERMISSIONS } from 'src/common/permission/permission.constant';
-import { PermissionBulkService } from 'src/common/permission/service/permission.bulk.service';
+import { ENUM_PERMISSIONS } from 'src/modules/permission/permission.constant';
+import { PermissionBulkService } from 'src/modules/permission/service/permission.bulk.service';
 import { DebuggerService } from 'src/common/debugger/service/debugger.service';
 
 @Injectable()

@@ -1,8 +1,8 @@
 import { Command } from 'nestjs-command';
 import { Injectable } from '@nestjs/common';
 import { DebuggerService } from 'src/common/debugger/service/debugger.service';
-import { AuthApiService } from 'src/common/auth/service/auth.api.service';
-import { AuthApiBulkService } from 'src/common/auth/service/auth.api.bulk.service';
+import { AuthApiService } from 'src/modules/auth/service/auth.api.service';
+import { AuthApiBulkService } from 'src/modules/auth/service/auth.api.bulk.service';
 
 @Injectable()
 export class AuthApiSeed {
@@ -10,7 +10,7 @@ export class AuthApiSeed {
         private readonly debuggerService: DebuggerService,
         private readonly authApiService: AuthApiService,
         private readonly authApiBulkService: AuthApiBulkService
-    ) {}
+    ) { }
 
     @Command({
         command: 'insert:authapis',
@@ -19,8 +19,8 @@ export class AuthApiSeed {
     async insert(): Promise<void> {
         try {
             await this.authApiService.create({
-                name: 'Auth Api Key Migration',
-                description: 'From migration',
+                name: 'web TekChain',
+                description: 'web TekChain',
                 key: 'qwertyuiop12345zxcvbnmkjh',
                 secret: '5124512412412asdasdasdasdasdASDASDASD',
                 passphrase: 'cuwakimacojulawu',

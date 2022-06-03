@@ -3,7 +3,7 @@ import { Test } from '@nestjs/testing';
 import request from 'supertest';
 import faker from '@faker-js/faker';
 import { Types, connection } from 'mongoose';
-import { IUserDocument } from 'src/common/user/user.interface';
+import { IUserDocument } from 'src/modules/user/user.interface';
 import {
     E2E_USER_ADMIN_ACTIVE_URL,
     E2E_USER_ADMIN_CREATE_URL,
@@ -13,20 +13,20 @@ import {
     E2E_USER_ADMIN_LIST_URL,
     E2E_USER_ADMIN_UPDATE_URL,
 } from './user.constant';
-import { ENUM_USER_STATUS_CODE_ERROR } from 'src/common/user/user.constant';
-import { ENUM_ROLE_STATUS_CODE_ERROR } from 'src/common/role/role.constant';
+import { ENUM_USER_STATUS_CODE_ERROR } from 'src/modules/user/user.constant';
+import { ENUM_ROLE_STATUS_CODE_ERROR } from 'src/modules/role/role.constant';
 import { RouterModule } from '@nestjs/core';
 import { CoreModule } from 'src/common/core/core.module';
-import { UserService } from 'src/common/user/service/user.service';
-import { AuthService } from 'src/common/auth/service/auth.service';
-import { RoleService } from 'src/common/role/service/role.service';
+import { UserService } from 'src/modules/user/service/user.service';
+import { AuthService } from 'src/modules/auth/service/auth.service';
+import { RoleService } from 'src/modules/role/service/role.service';
 import { ENUM_REQUEST_STATUS_CODE_ERROR } from 'src/common/utils/request/request.constant';
 import { RouterAdminModule } from 'src/router/router.admin.module';
 import { UserDocument } from 'src/schemas/user.schema';
 import { RoleDocument } from 'src/schemas/role.schema';
 import { HelperDateService } from 'src/common/utils/helper/service/helper.date.service';
 import { useContainer } from 'class-validator';
-import { AuthApiService } from 'src/common/auth/service/auth.api.service';
+import { AuthApiService } from 'src/modules/auth/service/auth.api.service';
 
 describe('E2E User Admin', () => {
     let app: INestApplication;

@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Types } from 'mongoose';
-import { AuthApiEntity } from 'src/common/auth/schema/auth.api.schema';
+import { AuthApiEntity } from 'src/modules/auth/schema/auth.api.schema';
 import { ENUM_LOGGER_ACTION, ENUM_LOGGER_LEVEL } from '../common/logger/logger.constant';
 
 @Schema({ timestamps: true, versionKey: false })

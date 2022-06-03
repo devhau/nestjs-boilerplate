@@ -1,5 +1,6 @@
 import { DynamicModule, Module } from '@nestjs/common';
 import { HelperModule } from '../utils/helper/helper.module';
+import { SocketGateway } from './socket.gateway';
 import { SocketService } from './socket.service';
 
 @Module({})
@@ -9,7 +10,7 @@ export class SocketModule {
             return {
                 module: SocketModule,
                 controllers: [],
-                providers: [SocketService],
+                providers: [SocketService, SocketGateway],
                 exports: [SocketService],
                 imports: [HelperModule],
             };

@@ -8,7 +8,7 @@ import { HelperDateService } from 'src/common/utils/helper/service/helper.date.s
 import request from 'supertest';
 import faker from '@faker-js/faker';
 import { E2E_DATABASE_INTEGRATION_URL } from './database.constant';
-import { AuthApiService } from 'src/common/auth/service/auth.api.service';
+import { AuthApiService } from 'src/modules/auth/service/auth.api.service';
 
 describe('Database Integration', () => {
     let app: INestApplication;

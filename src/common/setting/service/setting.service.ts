@@ -9,14 +9,22 @@ import { SettingUpdateDto } from '../dto/setting.update.dto';
 import { SettingDocument, SettingEntity } from '../../../schemas/setting.schema';
 import { SettingGetSerialization } from '../serialization/setting.get.serialization';
 import { SettingListSerialization } from '../serialization/setting.list.serialization';
+import { IMaintenance } from 'src/common/utils/middleware/maintenance/maintenance.interface';
 
 @Injectable()
-export class SettingService {
+export class SettingService implements IMaintenance {
     constructor(
         @DatabaseEntity(SettingEntity.name)
         private readonly settingModel: Model<SettingDocument>,
         private readonly helperStringService: HelperStringService
-    ) {}
+    ) { }
+    CheckMaintenance(): Promise<boolean> {
+        return new Promise<boolean>((resolve: any, reject: any) => {
+            return this.findOneByName('maintenance').then((maintenance: SettingDocument) => {
+                resolve(maintenance && maintenance.value as boolean);
+            }).catch(reject);
+        });
+    }
 
     async findAll(
         find?: Record<string, any>,

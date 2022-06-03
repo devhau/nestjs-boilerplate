@@ -13,21 +13,21 @@ import {
     E2E_ROLE_PAYLOAD_TEST,
 } from './role.constant';
 import { connection, Types } from 'mongoose';
-import { ENUM_ROLE_STATUS_CODE_ERROR } from 'src/common/role/role.constant';
+import { ENUM_ROLE_STATUS_CODE_ERROR } from 'src/modules/role/role.constant';
 import { RouterModule } from '@nestjs/core';
 import { CoreModule } from 'src/common/core/core.module';
-import { AuthService } from 'src/common/auth/service/auth.service';
-import { RoleService } from 'src/common/role/service/role.service';
-import { PermissionService } from 'src/common/permission/service/permission.service';
-import { RoleBulkService } from 'src/common/role/service/role.bulk.service';
+import { AuthService } from 'src/modules/auth/service/auth.service';
+import { RoleService } from 'src/modules/role/service/role.service';
+import { PermissionService } from 'src/modules/permission/service/permission.service';
+import { RoleBulkService } from 'src/modules/role/service/role.bulk.service';
 import { ENUM_REQUEST_STATUS_CODE_ERROR } from 'src/common/utils/request/request.constant';
 import { RouterAdminModule } from 'src/router/router.admin.module';
 import { RoleDocument } from 'src/schemas/role.schema';
 import { PermissionDocument } from 'src/schemas/permission.schema';
 import { HelperDateService } from 'src/common/utils/helper/service/helper.date.service';
-import { RoleCreateDto } from 'src/common/role/dto/role.create.dto';
+import { RoleCreateDto } from 'src/modules/role/dto/role.create.dto';
 import { useContainer } from 'class-validator';
-import { AuthApiService } from 'src/common/auth/service/auth.api.service';
+import { AuthApiService } from 'src/modules/auth/service/auth.api.service';
 
 describe('E2E Role Admin', () => {
     let app: INestApplication;
