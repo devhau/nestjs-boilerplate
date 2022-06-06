@@ -2,8 +2,8 @@ version: '3.8'
 services:
   service:
     build: .
-    container_name: ack
-    hostname: ack
+    container_name: devhau
+    hostname: devhau
     ports:
       - 3000:3000
     networks:
@@ -23,7 +23,7 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: 123456
-      MONGO_INITDB_DATABASE: ack
+      MONGO_INITDB_DATABASE: devhau
     volumes:
       - dbdata:/data/db
     restart: unless-stopped
