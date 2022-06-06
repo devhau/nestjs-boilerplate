@@ -1,7 +1,7 @@
 import { HttpStatus, INestApplication } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
 import request from 'supertest';
-import faker from '@faker-js/faker';
+import { faker } from '@faker-js/faker';
 import { IUserDocument } from 'src/modules/user/user.interface';
 import { E2E_AUTH_CHANGE_PASSWORD_URL } from './auth.constant';
 import { ENUM_USER_STATUS_CODE_ERROR } from 'src/modules/user/user.constant';
@@ -11,7 +11,7 @@ import { CoreModule } from 'src/common/core/core.module';
 import { RouterModule } from '@nestjs/core';
 import { UserService } from 'src/modules/user/service/user.service';
 import { AuthService } from 'src/modules/auth/service/auth.service';
-import { RoleService } from 'src/modules/role/service/role.service';
+import { RoleService } from 'src/common/role/service/role.service';
 import { ENUM_REQUEST_STATUS_CODE_ERROR } from 'src/common/utils/request/request.constant';
 import { RouterCommonModule } from 'src/router/router.common.module';
 import { UserDocument } from 'src/schemas/user.schema';

@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import faker from '@faker-js/faker';
+import { faker } from '@faker-js/faker';
 import { IHelperStringRandomOptions } from '../helper.interface';
 
 @Injectable()
@@ -25,17 +25,17 @@ export class HelperStringService {
         const rString =
             options && options.safe
                 ? faker.internet.password(
-                      length,
-                      true,
-                      /[A-Z]/,
-                      options && options.prefix ? options.prefix : undefined
-                  )
+                    length,
+                    true,
+                    /[A-Z]/,
+                    options && options.prefix ? options.prefix : undefined
+                )
                 : faker.internet.password(
-                      length,
-                      false,
-                      /\w/,
-                      options && options.prefix ? options.prefix : undefined
-                  );
+                    length,
+                    false,
+                    /\w/,
+                    options && options.prefix ? options.prefix : undefined
+                );
 
         return options && options.upperCase ? rString.toUpperCase() : rString;
     }
@@ -91,8 +91,7 @@ export class HelperStringService {
 
     checkPasswordStrong(password: string, length?: number): boolean {
         const regex = new RegExp(
-            `^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{${
-                length || 8
+            `^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{${length || 8
             },}$`
         );
 

@@ -10,7 +10,7 @@ export class LoggerService {
     constructor(
         @DatabaseEntity(LoggerEntity.name)
         private readonly loggerModel: Model<LoggerDocument>
-    ) {}
+    ) { }
 
     async info({
         action,

@@ -11,7 +11,7 @@ import {
     Patch,
     NotFoundException,
 } from '@nestjs/common';
-import { ENUM_PERMISSIONS } from 'src/modules/permission/permission.constant';
+import { ENUM_PERMISSIONS } from 'src/common/permission/permission.constant';
 import {
     GetUser,
     UserDeleteGuard,
@@ -21,9 +21,9 @@ import {
     UserUpdateInactiveGuard,
 } from '../user.decorator';
 import { AuthAdminJwtGuard } from 'src/modules/auth/auth.decorator';
-import { ENUM_ROLE_STATUS_CODE_ERROR } from 'src/modules/role/role.constant';
+import { ENUM_ROLE_STATUS_CODE_ERROR } from 'src/common/role/role.constant';
 import { UserService } from '../service/user.service';
-import { RoleService } from 'src/modules/role/service/role.service';
+import { RoleService } from 'src/common/role/service/role.service';
 import { IUserCheckExist, IUserDocument } from '../user.interface';
 import { ENUM_USER_STATUS_CODE_ERROR } from '../user.constant';
 import { PaginationService } from 'src/common/utils/pagination/service/pagination.service';

@@ -1,7 +1,7 @@
 import { HttpStatus, INestApplication } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
 import request from 'supertest';
-import faker from '@faker-js/faker';
+import { faker } from '@faker-js/faker';
 import { Types, connection } from 'mongoose';
 import { IUserDocument } from 'src/modules/user/user.interface';
 import {
@@ -14,12 +14,12 @@ import {
     E2E_USER_ADMIN_UPDATE_URL,
 } from './user.constant';
 import { ENUM_USER_STATUS_CODE_ERROR } from 'src/modules/user/user.constant';
-import { ENUM_ROLE_STATUS_CODE_ERROR } from 'src/modules/role/role.constant';
+import { ENUM_ROLE_STATUS_CODE_ERROR } from 'src/common/role/role.constant';
 import { RouterModule } from '@nestjs/core';
 import { CoreModule } from 'src/common/core/core.module';
 import { UserService } from 'src/modules/user/service/user.service';
 import { AuthService } from 'src/modules/auth/service/auth.service';
-import { RoleService } from 'src/modules/role/service/role.service';
+import { RoleService } from 'src/common/role/service/role.service';
 import { ENUM_REQUEST_STATUS_CODE_ERROR } from 'src/common/utils/request/request.constant';
 import { RouterAdminModule } from 'src/router/router.admin.module';
 import { UserDocument } from 'src/schemas/user.schema';

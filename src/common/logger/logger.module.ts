@@ -10,8 +10,6 @@ import { LoggerService } from './service/logger.service';
 
 @Global()
 @Module({
-    providers: [LoggerService],
-    exports: [LoggerService],
     imports: [
         MongooseModule.forFeature(
             [
@@ -24,5 +22,7 @@ import { LoggerService } from './service/logger.service';
             DATABASE_CONNECTION_NAME
         ),
     ],
+    providers: [LoggerService],
+    exports: [LoggerService],
 })
-export class LoggerModule {}
+export class LoggerModule { }

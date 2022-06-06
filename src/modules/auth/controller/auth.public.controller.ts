@@ -7,9 +7,9 @@ import {
     Post,
 } from '@nestjs/common';
 import { DebuggerService } from 'src/common/debugger/service/debugger.service';
-import { ENUM_ROLE_STATUS_CODE_ERROR } from 'src/modules/role/role.constant';
+import { ENUM_ROLE_STATUS_CODE_ERROR } from 'src/common/role/role.constant';
 import { RoleDocument } from 'src/schemas/role.schema';
-import { RoleService } from 'src/modules/role/service/role.service';
+import { RoleService } from 'src/common/role/service/role.service';
 import { UserService } from 'src/modules/user/service/user.service';
 import { ENUM_USER_STATUS_CODE_ERROR } from 'src/modules/user/user.constant';
 import { IUserCheckExist, IUserDocument } from 'src/modules/user/user.interface';

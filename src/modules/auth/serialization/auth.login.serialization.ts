@@ -1,6 +1,6 @@
 import { Exclude, Transform, Type } from 'class-transformer';
 import { IAwsS3Response } from 'src/common/aws/aws.interface';
-import { IRoleDocument } from 'src/modules/role/role.interface';
+import { IRoleDocument } from 'src/common/role/role.interface';
 
 export class AuthLoginSerialization {
     @Type(() => String)

@@ -11,7 +11,7 @@ import {
     Patch,
 } from '@nestjs/common';
 import { ENUM_USER_STATUS_CODE_ERROR } from 'src/modules/user/user.constant';
-import { ENUM_ROLE_STATUS_CODE_ERROR } from 'src/modules/role/role.constant';
+import { ENUM_ROLE_STATUS_CODE_ERROR } from 'src/common/role/role.constant';
 import { UserService } from 'src/modules/user/service/user.service';
 import { AuthService } from '../service/auth.service';
 import {

@@ -14,9 +14,9 @@ import {
 import {
     ENUM_PERMISSIONS,
     ENUM_PERMISSION_STATUS_CODE_ERROR,
-} from 'src/modules/permission/permission.constant';
+} from 'src/common/permission/permission.constant';
 import { AuthAdminJwtGuard } from 'src/modules/auth/auth.decorator';
-import { PermissionService } from 'src/modules/permission/service/permission.service';
+import { PermissionService } from 'src/common/permission/service/permission.service';
 import { RoleService } from '../service/role.service';
 import {
     GetRole,

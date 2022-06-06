@@ -1,4 +1,4 @@
-import { IRoleDocument } from 'src/modules/role/role.interface';
+import { IRoleDocument } from 'src/common/role/role.interface';
 import { UserDocument } from '../../schemas/user.schema';
 
 export interface IUserDocument extends Omit<UserDocument, 'role'> {

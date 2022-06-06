@@ -4,6 +4,7 @@ import {
     NestMiddleware,
     ServiceUnavailableException,
 } from '@nestjs/common';
+import { ModuleRef } from '@nestjs/core';
 import { Response, NextFunction } from 'express';
 import { ENUM_STATUS_CODE_ERROR } from 'src/common/utils/error/error.constant';
 import { IRequestApp } from 'src/common/utils/request/request.interface';
@@ -11,7 +12,14 @@ import { IMaintenance } from './maintenance.interface';
 
 @Injectable()
 export class MaintenanceMiddleware implements NestMiddleware {
-    constructor(@Inject('IMaintenance') private readonly maintenance: IMaintenance) { }
+    private maintenance: IMaintenance;
+    constructor(moduleRef: ModuleRef) {
+        try {
+            this.maintenance = moduleRef.get<IMaintenance>('IMaintenance', { strict: false });
+        } catch {
+
+        }
+    }
 
     async use(
         req: IRequestApp,
@@ -20,7 +28,7 @@ export class MaintenanceMiddleware implements NestMiddleware {
     ): Promise<void> {
         const isMaintenance = await this.maintenance?.CheckMaintenance();
 
-        if (isMaintenance && isMaintenance as boolean) {
+        if (isMaintenance) {
             throw new ServiceUnavailableException({
                 statusCode: ENUM_STATUS_CODE_ERROR.SERVICE_UNAVAILABLE,
                 message: 'http.serverError.serviceUnavailable',

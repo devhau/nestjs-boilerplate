@@ -13,7 +13,7 @@ import { HelperDateService } from 'src/common/utils/helper/service/helper.date.s
 import { connection, Types } from 'mongoose';
 import { E2E_SETTING_ADMIN_UPDATE_URL } from './setting.constant';
 import request from 'supertest';
-import faker from '@faker-js/faker';
+import { faker } from '@faker-js/faker';
 import { SettingDocument } from 'src/schemas/setting.schema';
 import { ENUM_SETTING_STATUS_CODE_ERROR } from 'src/common/setting/setting.constant';
 import { ENUM_REQUEST_STATUS_CODE_ERROR } from 'src/common/utils/request/request.constant';

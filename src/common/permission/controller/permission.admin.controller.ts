@@ -7,7 +7,7 @@ import {
     Put,
     Query,
 } from '@nestjs/common';
-import { ENUM_PERMISSIONS } from 'src/modules/permission/permission.constant';
+import { ENUM_PERMISSIONS } from 'src/common/permission/permission.constant';
 import { AuthAdminJwtGuard } from 'src/modules/auth/auth.decorator';
 import { DebuggerService } from 'src/common/debugger/service/debugger.service';
 import { PermissionService } from '../service/permission.service';

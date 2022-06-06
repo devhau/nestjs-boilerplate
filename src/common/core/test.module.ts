@@ -18,9 +18,11 @@ import { MessageModule } from 'src/common/message/message.module';
 import { SettingModule } from '../setting/setting.module';
 import { PermissionModule } from '../permission/permission.module';
 import { RoleModule } from '../role/role.module';
-
+import { HealthModule } from '../health/health.module';
 @Module({
-    controllers: [],
+    controllers: [
+
+    ],
     providers: [],
     imports: [
         MiddlewareModule,
@@ -44,7 +46,6 @@ import { RoleModule } from '../role/role.module';
             useFactory: (databaseService: DatabaseService) =>
                 databaseService.createMongooseOptions(),
         }),
-        LoggerModule,
         ErrorModule,
         RequestModule,
         DatabaseModule,
@@ -52,9 +53,10 @@ import { RoleModule } from '../role/role.module';
         PaginationModule,
         DebuggerModule,
         HelperModule,
+        //RoleModule,
+        //LoggerModule,
         SettingModule,
-        RoleModule,
-        PermissionModule
+        HealthModule
     ],
 })
-export class CoreModule { }
+export class TestModule { }

@@ -5,11 +5,11 @@ import {
     applyDecorators,
     SetMetadata,
 } from '@nestjs/common';
-import { PermissionPayloadDefaultGuard } from 'src/modules/permission/guard/payload/permission.default.guard';
+import { PermissionPayloadDefaultGuard } from 'src/common/permission/guard/payload/permission.default.guard';
 import {
     ENUM_PERMISSIONS,
     PERMISSION_META_KEY,
-} from 'src/modules/permission/permission.constant';
+} from 'src/common/permission/permission.constant';
 import { AUTH_ADMIN_META_KEY } from './auth.constant';
 import { BasicGuard } from './guard/basic/auth.basic.guard';
 import { JwtRefreshGuard } from './guard/jwt-refresh/auth.jwt-refresh.guard';

@@ -7,12 +7,10 @@ import { AppRouterModule } from './router/app.router.module';
     controllers: [],
     providers: [],
     imports: [
+
         // Core
         CoreModule,
         
-        // Modules
-        ModulesModule,
-
         // Task
         TaskModule.register(),
 

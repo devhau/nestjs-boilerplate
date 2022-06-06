@@ -10,8 +10,8 @@ import {
     ENUM_PERMISSIONS,
     ENUM_PERMISSION_STATUS_CODE_ERROR,
     PERMISSION_META_KEY,
-} from 'src/modules/permission/permission.constant';
-import { IPermission } from 'src/modules/permission/permission.interface';
+} from 'src/common/permission/permission.constant';
+import { IPermission } from 'src/common/permission/permission.interface';
 
 @Injectable()
 export class PermissionPayloadDefaultGuard implements CanActivate {

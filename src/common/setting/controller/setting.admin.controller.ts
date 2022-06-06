@@ -6,7 +6,7 @@ import {
 } from '@nestjs/common';
 import { AuthAdminJwtGuard } from 'src/modules/auth/auth.decorator';
 import { DebuggerService } from 'src/common/debugger/service/debugger.service';
-import { ENUM_PERMISSIONS } from 'src/modules/permission/permission.constant';
+import { ENUM_PERMISSIONS } from 'src/common/permission/permission.constant';
 import { ENUM_STATUS_CODE_ERROR } from 'src/common/utils/error/error.constant';
 import { RequestParamGuard } from 'src/common/utils/request/request.decorator';
 import { Response } from 'src/common/utils/response/response.decorator';

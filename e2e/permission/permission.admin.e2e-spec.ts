@@ -1,7 +1,7 @@
 import { HttpStatus, INestApplication } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
 import request from 'supertest';
-import faker from '@faker-js/faker';
+import { faker } from '@faker-js/faker';
 import {
     E2E_PERMISSION_ADMIN_ACTIVE_URL,
     E2E_PERMISSION_ADMIN_GET_URL,
@@ -11,16 +11,16 @@ import {
     E2E_PERMISSION_PAYLOAD_TEST,
 } from './permission.constant';
 import { Types, connection } from 'mongoose';
-import { ENUM_PERMISSION_STATUS_CODE_ERROR } from 'src/modules/permission/permission.constant';
+import { ENUM_PERMISSION_STATUS_CODE_ERROR } from 'src/common/permission/permission.constant';
 import { CoreModule } from 'src/common/core/core.module';
 import { RouterModule } from '@nestjs/core';
-import { PermissionService } from 'src/modules/permission/service/permission.service';
+import { PermissionService } from 'src/common/permission/service/permission.service';
 import { AuthService } from 'src/modules/auth/service/auth.service';
 import { ENUM_REQUEST_STATUS_CODE_ERROR } from 'src/common/utils/request/request.constant';
 import { RouterAdminModule } from 'src/router/router.admin.module';
 import { PermissionDocument } from 'src/schemas/permission.schema';
 import { HelperDateService } from 'src/common/utils/helper/service/helper.date.service';
-import { PermissionUpdateDto } from 'src/modules/permission/dto/permission.update.dto';
+import { PermissionUpdateDto } from 'src/common/permission/dto/permission.update.dto';
 import { useContainer } from 'class-validator';
 import { AuthApiService } from 'src/modules/auth/service/auth.api.service';
 

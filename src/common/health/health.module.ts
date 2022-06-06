@@ -7,4 +7,4 @@ import { AwsHealthIndicator } from './indicator/health.aws.indicator';
     exports: [AwsHealthIndicator],
     imports: [AwsModule],
 })
-export class HealthModule {}
+export class HealthModule { }

@@ -31,7 +31,6 @@ export class DatabaseService implements MongooseOptionsFactory {
 
     createMongooseOptions(): MongooseModuleOptions {
         let uri = `${this.host}`;
-
         if (this.database) {
             uri = `${uri}/${this.database}${this.options}`;
         }
