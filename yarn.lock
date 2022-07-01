@@ -1788,10 +1788,10 @@
   resolved "https://registry.yarnpkg.com/@nestjs/mapped-types/-/mapped-types-1.0.1.tgz#78b62041c7a407db4a90eb140567321602bed18e"
   integrity sha512-NFvofzSinp00j5rzUd4tf+xi9od6383iY0JP7o0Bnu1fuItAUkWBgc4EKuIQ3D+c2QI3i9pG1kDWAeY27EMGtg==
 
-"@nestjs/mongoose@^9.0.3":
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/@nestjs/mongoose/-/mongoose-9.1.0.tgz#670a532ac56557d0abf1470b8ab95208fc00ce95"
-  integrity sha512-tkd5ZD7UYreHv/OaEcdgbsiwywmXuAwzcD3u/kGAGE8c4dyutkc09LxNGsp9q0+NdV0EK3NauICNLWspF7S+wA==
+"@nestjs/mongoose@^9.1.0":
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/@nestjs/mongoose/-/mongoose-9.1.1.tgz#b7ef085a2ca0a04edbf2ffc18877d602f6ac891b"
+  integrity sha512-sKZKI+walquKbCu3wSgO9X6a8MAkfsOlUTdPGv6IFo9NtTSp4sdrfiWFk2rQVc1N05J4Jdt94fnPKWJf+7U8uQ==
 
 "@nestjs/passport@^8.2.1":
   version "8.2.1"
@@ -1870,10 +1870,10 @@
   dependencies:
     tslib "2.4.0"
 
-"@nestjs/websockets@^8.4.6":
-  version "8.4.6"
-  resolved "https://registry.yarnpkg.com/@nestjs/websockets/-/websockets-8.4.6.tgz#d95d86af1076b153a1fb79aaf7aeef4221b7dd82"
-  integrity sha512-4MQhNv58nz14m8ifyE+jBBsFZoSn7KaaEry7MN2gKYKpWJwn9zW5ghrxb+VoWVvpuLE0CZ1kHN5zlvLqUnFfzA==
+"@nestjs/websockets@^8.4.7":
+  version "8.4.7"
+  resolved "https://registry.yarnpkg.com/@nestjs/websockets/-/websockets-8.4.7.tgz#16b26b515de1e06d5e72d306b77d77a106691b6a"
+  integrity sha512-UeXKTR7s2vQTGsSFhFR1dunptiICNf24nkLWoBud0kKx8HCRnhsNycyXbtwtAkioTjYXqm+vWeb9eb1Nv6+r2w==
   dependencies:
     iterare "1.2.1"
     object-hash "3.0.0"
@@ -7405,12 +7405,12 @@ tsconfig-paths@^4.0.0:
     minimist "^1.2.6"
     strip-bom "^3.0.0"
 
-tslib@2.3.1, tslib@^2.1.0, tslib@^2.3.1:
+tslib@2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
   integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
 
-tslib@2.4.0:
+tslib@2.4.0, tslib@^2.1.0, tslib@^2.3.1:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
   integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
