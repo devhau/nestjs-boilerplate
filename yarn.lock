@@ -1788,10 +1788,10 @@
   resolved "https://registry.yarnpkg.com/@nestjs/mapped-types/-/mapped-types-1.0.1.tgz#78b62041c7a407db4a90eb140567321602bed18e"
   integrity sha512-NFvofzSinp00j5rzUd4tf+xi9od6383iY0JP7o0Bnu1fuItAUkWBgc4EKuIQ3D+c2QI3i9pG1kDWAeY27EMGtg==
 
-"@nestjs/mongoose@^9.0.3":
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/@nestjs/mongoose/-/mongoose-9.1.0.tgz#670a532ac56557d0abf1470b8ab95208fc00ce95"
-  integrity sha512-tkd5ZD7UYreHv/OaEcdgbsiwywmXuAwzcD3u/kGAGE8c4dyutkc09LxNGsp9q0+NdV0EK3NauICNLWspF7S+wA==
+"@nestjs/mongoose@^9.1.0":
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/@nestjs/mongoose/-/mongoose-9.1.1.tgz#b7ef085a2ca0a04edbf2ffc18877d602f6ac891b"
+  integrity sha512-sKZKI+walquKbCu3wSgO9X6a8MAkfsOlUTdPGv6IFo9NtTSp4sdrfiWFk2rQVc1N05J4Jdt94fnPKWJf+7U8uQ==
 
 "@nestjs/passport@^8.2.1":
   version "8.2.1"
@@ -6036,10 +6036,10 @@ nestjs-command@^3.1.1:
     lodash.compact "^3.0.1"
     lodash.flattendeep "^4.4.0"
 
-nestjs-i18n@^9.1.1:
-  version "9.1.1"
-  resolved "https://registry.yarnpkg.com/nestjs-i18n/-/nestjs-i18n-9.1.1.tgz#705901dbca9a5b851b4d390e5ac4a68e58027b85"
-  integrity sha512-u9HRnRjaxlqOXzj+l5ExLL82wBNYd7sNIIqBzty7jgnqNT2R2uCNFMPKIC64EyTPmIc8smWS5Jm8YyImZdGMzA==
+nestjs-i18n@^9.1.3:
+  version "9.1.3"
+  resolved "https://registry.yarnpkg.com/nestjs-i18n/-/nestjs-i18n-9.1.3.tgz#2ade880f534aeb7159348dfbdd35348a401f18d7"
+  integrity sha512-55hLPenqoHq7sNybxjHoe6Q+RjeZelmaCnCx/niT28GvCLPUteNO4jOe/4AWvLvLrnW0cj7l0sHHzgXlPTilfg==
   dependencies:
     accept-language-parser "^1.5.0"
     chokidar "^3.5.3"
